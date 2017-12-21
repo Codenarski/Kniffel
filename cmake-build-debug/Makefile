@@ -149,6 +149,33 @@ Die.c.s:
 	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Die.c.s
 .PHONY : Die.c.s
 
+Entry.obj: Entry.c.obj
+
+.PHONY : Entry.obj
+
+# target to build an object file
+Entry.c.obj:
+	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Entry.c.obj
+.PHONY : Entry.c.obj
+
+Entry.i: Entry.c.i
+
+.PHONY : Entry.i
+
+# target to preprocess a source file
+Entry.c.i:
+	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Entry.c.i
+.PHONY : Entry.c.i
+
+Entry.s: Entry.c.s
+
+.PHONY : Entry.s
+
+# target to generate assembly for a file
+Entry.c.s:
+	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Entry.c.s
+.PHONY : Entry.c.s
+
 Player.obj: Player.c.obj
 
 .PHONY : Player.obj
@@ -175,6 +202,33 @@ Player.s: Player.c.s
 Player.c.s:
 	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Player.c.s
 .PHONY : Player.c.s
+
+Scorecard.obj: Scorecard.c.obj
+
+.PHONY : Scorecard.obj
+
+# target to build an object file
+Scorecard.c.obj:
+	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Scorecard.c.obj
+.PHONY : Scorecard.c.obj
+
+Scorecard.i: Scorecard.c.i
+
+.PHONY : Scorecard.i
+
+# target to preprocess a source file
+Scorecard.c.i:
+	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Scorecard.c.i
+.PHONY : Scorecard.c.i
+
+Scorecard.s: Scorecard.c.s
+
+.PHONY : Scorecard.s
+
+# target to generate assembly for a file
+Scorecard.c.s:
+	$(MAKE) -f CMakeFiles\Kniffel3.dir\build.make CMakeFiles/Kniffel3.dir/Scorecard.c.s
+.PHONY : Scorecard.c.s
 
 main.obj: main.c.obj
 
@@ -215,9 +269,15 @@ help:
 	@echo ... Die.obj
 	@echo ... Die.i
 	@echo ... Die.s
+	@echo ... Entry.obj
+	@echo ... Entry.i
+	@echo ... Entry.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s
+	@echo ... Scorecard.obj
+	@echo ... Scorecard.i
+	@echo ... Scorecard.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

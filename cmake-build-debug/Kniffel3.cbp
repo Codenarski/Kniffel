@@ -82,10 +82,22 @@
 		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/Die.h">
 			<Option target="Kniffel3"/>
 		</Unit>
+		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/Entry.c">
+			<Option target="Kniffel3"/>
+		</Unit>
+		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/Entry.h">
+			<Option target="Kniffel3"/>
+		</Unit>
 		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.c">
 			<Option target="Kniffel3"/>
 		</Unit>
 		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.h">
+			<Option target="Kniffel3"/>
+		</Unit>
+		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/Scorecard.c">
+			<Option target="Kniffel3"/>
+		</Unit>
+		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/Scorecard.h">
 			<Option target="Kniffel3"/>
 		</Unit>
 		<Unit filename="C:/Users/Bednarskij/CLionProjects/Kniffel3/main.c">

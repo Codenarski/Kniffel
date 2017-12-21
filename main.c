@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "Player.h"
 #include "Die.h"
+#include "Entry.h"
+#include "Scorecard.h"
 
 int main() {
     int amount;

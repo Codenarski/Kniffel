@@ -5,7 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Bednarskij/CLionProjects/Kniffel3/Die.c" "C:/Users/Bednarskij/CLionProjects/Kniffel3/cmake-build-debug/CMakeFiles/Kniffel3.dir/Die.c.obj"
+  "C:/Users/Bednarskij/CLionProjects/Kniffel3/Entry.c" "C:/Users/Bednarskij/CLionProjects/Kniffel3/cmake-build-debug/CMakeFiles/Kniffel3.dir/Entry.c.obj"
   "C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.c" "C:/Users/Bednarskij/CLionProjects/Kniffel3/cmake-build-debug/CMakeFiles/Kniffel3.dir/Player.c.obj"
+  "C:/Users/Bednarskij/CLionProjects/Kniffel3/Scorecard.c" "C:/Users/Bednarskij/CLionProjects/Kniffel3/cmake-build-debug/CMakeFiles/Kniffel3.dir/Scorecard.c.obj"
   "C:/Users/Bednarskij/CLionProjects/Kniffel3/main.c" "C:/Users/Bednarskij/CLionProjects/Kniffel3/cmake-build-debug/CMakeFiles/Kniffel3.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
