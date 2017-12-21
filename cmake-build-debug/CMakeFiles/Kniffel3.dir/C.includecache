@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.c
+stdlib.h
+-
+string.h
+-
+
+C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.h
+
+C:/Users/Bednarskij/CLionProjects/Kniffel3/main.c
+stdio.h
+-
+Player.h
+C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.h
+
