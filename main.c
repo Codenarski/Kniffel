@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "Player.h"
+#include "Die.h"
 
 int main() {
     int amount;

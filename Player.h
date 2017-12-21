@@ -4,6 +4,7 @@
 
 #ifndef KNIFFEL3_PLAYER_H
 #define KNIFFEL3_PLAYER_H
+
 typedef struct Player Player;
 typedef struct PlayerList PlayerList;
 
