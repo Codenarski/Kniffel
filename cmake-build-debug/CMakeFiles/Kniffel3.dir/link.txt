@@ -1,3 +1,0 @@
-"D:\Programme\IDE\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\Kniffel3.dir/objects.a
-"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\ar.exe" cr CMakeFiles\Kniffel3.dir/objects.a @CMakeFiles\Kniffel3.dir\objects1.rsp
-"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" -g   -Wl,--whole-archive CMakeFiles\Kniffel3.dir/objects.a -Wl,--no-whole-archive  -o Kniffel3.exe -Wl,--out-implib,libKniffel3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Kniffel3.dir\linklibs.rsp

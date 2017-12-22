@@ -1,4 +1,0 @@
-ToolSet: 5.0@D:\Programme\IDE\CLion 2017.2.3\MinGW
-Options: 
-
-Options:
