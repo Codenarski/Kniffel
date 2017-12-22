@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/MinGW/bin/gcc.exe")
+set(CMAKE_C_COMPILER "D:/Programme/IDE/CLion 2017.2.3/MinGW/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "6.3.0")
@@ -14,11 +14,11 @@ set(CMAKE_C_SIMULATE_ID "")
 set(CMAKE_C_SIMULATE_VERSION "")
 
 
-set(CMAKE_AR "C:/MinGW/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "C:/MinGW/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "C:/MinGW/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "C:/MinGW/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/MinGW/bin/ld.exe")
+set(CMAKE_AR "D:/Programme/IDE/CLion 2017.2.3/MinGW/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "D:/Programme/IDE/CLion 2017.2.3/MinGW/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "D:/Programme/IDE/CLion 2017.2.3/MinGW/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "D:/Programme/IDE/CLion 2017.2.3/MinGW/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "D:/Programme/IDE/CLion 2017.2.3/MinGW/bin/ld.exe")
 set(CMAKE_COMPILER_IS_GNUCC 1)
 set(CMAKE_C_COMPILER_LOADED 1)
 set(CMAKE_C_COMPILER_WORKS TRUE)
@@ -66,6 +66,6 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;gcc_eh;moldname;mingwex;advapi32;shell32;user32;kernel32;mingw32;gcc;gcc_eh;moldname;mingwex")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/MinGW/lib/gcc/mingw32/6.3.0;C:/MinGW/lib/gcc;C:/MinGW/mingw32/lib;C:/MinGW/lib")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

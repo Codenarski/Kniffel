@@ -6,17 +6,47 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.c
+D:/Programme/Projects/Kniffel3/Die.c
+Entity.h
+D:/Programme/Projects/Kniffel3/Entity.h
+stdlib.h
+-
+time.h
+-
+
+D:/Programme/Projects/Kniffel3/Die.h
+Entity.h
+D:/Programme/Projects/Kniffel3/Entity.h
+Player.h
+D:/Programme/Projects/Kniffel3/Player.h
+stdbool.h
+-
+
+D:/Programme/Projects/Kniffel3/Entity.h
+stdbool.h
+-
+
+D:/Programme/Projects/Kniffel3/Entry.c
+
+D:/Programme/Projects/Kniffel3/Player.c
 stdlib.h
 -
 string.h
 -
+Player.h
+D:/Programme/Projects/Kniffel3/Player.h
 
-C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.h
+D:/Programme/Projects/Kniffel3/Player.h
+Entity.h
+D:/Programme/Projects/Kniffel3/Entity.h
 
-C:/Users/Bednarskij/CLionProjects/Kniffel3/main.c
+D:/Programme/Projects/Kniffel3/Scorecard.c
+
+D:/Programme/Projects/Kniffel3/main.c
 stdio.h
 -
 Player.h
-C:/Users/Bednarskij/CLionProjects/Kniffel3/Player.h
+D:/Programme/Projects/Kniffel3/Player.h
+Die.h
+D:/Programme/Projects/Kniffel3/Die.h
 

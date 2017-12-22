@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\Bednarskij\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Programme\IDE\CLion 2017.2.3\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\Bednarskij\AppData\Roaming\JetBrains\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "D:\Programme\IDE\CLion 2017.2.3\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Bednarskij\CLionProjects\Kniffel3
+CMAKE_SOURCE_DIR = D:\Programme\Projects\Kniffel3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug
+CMAKE_BINARY_DIR = D:\Programme\Projects\Kniffel3\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Kniffel3.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/Kniffel3.dir/flags.make
 
 CMakeFiles/Kniffel3.dir/main.c.obj: CMakeFiles/Kniffel3.dir/flags.make
 CMakeFiles/Kniffel3.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Kniffel3.dir/main.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\main.c.obj   -c C:\Users\Bednarskij\CLionProjects\Kniffel3\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Programme\Projects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Kniffel3.dir/main.c.obj"
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\main.c.obj   -c D:\Programme\Projects\Kniffel3\main.c
 
 CMakeFiles/Kniffel3.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Kniffel3.dir/main.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Bednarskij\CLionProjects\Kniffel3\main.c > CMakeFiles\Kniffel3.dir\main.c.i
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Programme\Projects\Kniffel3\main.c > CMakeFiles\Kniffel3.dir\main.c.i
 
 CMakeFiles/Kniffel3.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Kniffel3.dir/main.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Bednarskij\CLionProjects\Kniffel3\main.c -o CMakeFiles\Kniffel3.dir\main.c.s
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Programme\Projects\Kniffel3\main.c -o CMakeFiles\Kniffel3.dir\main.c.s
 
 CMakeFiles/Kniffel3.dir/main.c.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/Kniffel3.dir/main.c.obj.provides.build: CMakeFiles/Kniffel3.dir/main.
 
 CMakeFiles/Kniffel3.dir/Player.c.obj: CMakeFiles/Kniffel3.dir/flags.make
 CMakeFiles/Kniffel3.dir/Player.c.obj: ../Player.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Kniffel3.dir/Player.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Player.c.obj   -c C:\Users\Bednarskij\CLionProjects\Kniffel3\Player.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Programme\Projects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Kniffel3.dir/Player.c.obj"
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Player.c.obj   -c D:\Programme\Projects\Kniffel3\Player.c
 
 CMakeFiles/Kniffel3.dir/Player.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Kniffel3.dir/Player.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Bednarskij\CLionProjects\Kniffel3\Player.c > CMakeFiles\Kniffel3.dir\Player.c.i
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Programme\Projects\Kniffel3\Player.c > CMakeFiles\Kniffel3.dir\Player.c.i
 
 CMakeFiles/Kniffel3.dir/Player.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Kniffel3.dir/Player.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Bednarskij\CLionProjects\Kniffel3\Player.c -o CMakeFiles\Kniffel3.dir\Player.c.s
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Programme\Projects\Kniffel3\Player.c -o CMakeFiles\Kniffel3.dir\Player.c.s
 
 CMakeFiles/Kniffel3.dir/Player.c.obj.requires:
 
@@ -106,16 +106,16 @@ CMakeFiles/Kniffel3.dir/Player.c.obj.provides.build: CMakeFiles/Kniffel3.dir/Pla
 
 CMakeFiles/Kniffel3.dir/Die.c.obj: CMakeFiles/Kniffel3.dir/flags.make
 CMakeFiles/Kniffel3.dir/Die.c.obj: ../Die.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Kniffel3.dir/Die.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Die.c.obj   -c C:\Users\Bednarskij\CLionProjects\Kniffel3\Die.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Programme\Projects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Kniffel3.dir/Die.c.obj"
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Die.c.obj   -c D:\Programme\Projects\Kniffel3\Die.c
 
 CMakeFiles/Kniffel3.dir/Die.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Kniffel3.dir/Die.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Bednarskij\CLionProjects\Kniffel3\Die.c > CMakeFiles\Kniffel3.dir\Die.c.i
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Programme\Projects\Kniffel3\Die.c > CMakeFiles\Kniffel3.dir\Die.c.i
 
 CMakeFiles/Kniffel3.dir/Die.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Kniffel3.dir/Die.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Bednarskij\CLionProjects\Kniffel3\Die.c -o CMakeFiles\Kniffel3.dir\Die.c.s
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Programme\Projects\Kniffel3\Die.c -o CMakeFiles\Kniffel3.dir\Die.c.s
 
 CMakeFiles/Kniffel3.dir/Die.c.obj.requires:
 
@@ -130,16 +130,16 @@ CMakeFiles/Kniffel3.dir/Die.c.obj.provides.build: CMakeFiles/Kniffel3.dir/Die.c.
 
 CMakeFiles/Kniffel3.dir/Entry.c.obj: CMakeFiles/Kniffel3.dir/flags.make
 CMakeFiles/Kniffel3.dir/Entry.c.obj: ../Entry.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Kniffel3.dir/Entry.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Entry.c.obj   -c C:\Users\Bednarskij\CLionProjects\Kniffel3\Entry.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Programme\Projects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Kniffel3.dir/Entry.c.obj"
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Entry.c.obj   -c D:\Programme\Projects\Kniffel3\Entry.c
 
 CMakeFiles/Kniffel3.dir/Entry.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Kniffel3.dir/Entry.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Bednarskij\CLionProjects\Kniffel3\Entry.c > CMakeFiles\Kniffel3.dir\Entry.c.i
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Programme\Projects\Kniffel3\Entry.c > CMakeFiles\Kniffel3.dir\Entry.c.i
 
 CMakeFiles/Kniffel3.dir/Entry.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Kniffel3.dir/Entry.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Bednarskij\CLionProjects\Kniffel3\Entry.c -o CMakeFiles\Kniffel3.dir\Entry.c.s
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Programme\Projects\Kniffel3\Entry.c -o CMakeFiles\Kniffel3.dir\Entry.c.s
 
 CMakeFiles/Kniffel3.dir/Entry.c.obj.requires:
 
@@ -154,16 +154,16 @@ CMakeFiles/Kniffel3.dir/Entry.c.obj.provides.build: CMakeFiles/Kniffel3.dir/Entr
 
 CMakeFiles/Kniffel3.dir/Scorecard.c.obj: CMakeFiles/Kniffel3.dir/flags.make
 CMakeFiles/Kniffel3.dir/Scorecard.c.obj: ../Scorecard.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Kniffel3.dir/Scorecard.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Scorecard.c.obj   -c C:\Users\Bednarskij\CLionProjects\Kniffel3\Scorecard.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Programme\Projects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Kniffel3.dir/Scorecard.c.obj"
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Kniffel3.dir\Scorecard.c.obj   -c D:\Programme\Projects\Kniffel3\Scorecard.c
 
 CMakeFiles/Kniffel3.dir/Scorecard.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Kniffel3.dir/Scorecard.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Bednarskij\CLionProjects\Kniffel3\Scorecard.c > CMakeFiles\Kniffel3.dir\Scorecard.c.i
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\Programme\Projects\Kniffel3\Scorecard.c > CMakeFiles\Kniffel3.dir\Scorecard.c.i
 
 CMakeFiles/Kniffel3.dir/Scorecard.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Kniffel3.dir/Scorecard.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Bednarskij\CLionProjects\Kniffel3\Scorecard.c -o CMakeFiles\Kniffel3.dir\Scorecard.c.s
+	"D:\Programme\IDE\CLion 2017.2.3\MinGW\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\Programme\Projects\Kniffel3\Scorecard.c -o CMakeFiles\Kniffel3.dir\Scorecard.c.s
 
 CMakeFiles/Kniffel3.dir/Scorecard.c.obj.requires:
 
@@ -196,7 +196,7 @@ Kniffel3.exe: CMakeFiles/Kniffel3.dir/build.make
 Kniffel3.exe: CMakeFiles/Kniffel3.dir/linklibs.rsp
 Kniffel3.exe: CMakeFiles/Kniffel3.dir/objects1.rsp
 Kniffel3.exe: CMakeFiles/Kniffel3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Kniffel3.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Programme\Projects\Kniffel3\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Kniffel3.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Kniffel3.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -217,6 +217,6 @@ CMakeFiles/Kniffel3.dir/clean:
 .PHONY : CMakeFiles/Kniffel3.dir/clean
 
 CMakeFiles/Kniffel3.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Bednarskij\CLionProjects\Kniffel3 C:\Users\Bednarskij\CLionProjects\Kniffel3 C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug C:\Users\Bednarskij\CLionProjects\Kniffel3\cmake-build-debug\CMakeFiles\Kniffel3.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Programme\Projects\Kniffel3 D:\Programme\Projects\Kniffel3 D:\Programme\Projects\Kniffel3\cmake-build-debug D:\Programme\Projects\Kniffel3\cmake-build-debug D:\Programme\Projects\Kniffel3\cmake-build-debug\CMakeFiles\Kniffel3.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Kniffel3.dir/depend
 
