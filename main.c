@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "Player.h"
 #include "Die.h"
+#include "Scorecard.h"
 
 PlayerList *letUserSelectPlayer();
 
@@ -14,14 +15,21 @@ int main() {
     letUserGivePlayerNames(playerList);
     printf("\nStarting Kniffel with the following players\n");
     tellUserPlayerNames(playerList);
-
     Dice *dice = init_dice();
-
+    roll_dice(dice);
     for (int i = 0; i < 5; ++i) {
         printf("Dice[%d]: %d \n", i, dice->dice[i].value);
     }
-    roll_dice(dice);
+    Scorecard *scorecard = initializeScorecard();
+    for (int j = 0; j < scorecard->size; ++j) {
+        ScorecardEntry *entry = &scorecard->entries[j];
 
+        //Todo: Remove Check
+        printf("scorecard->entries[%d].name: %s \n", j, entry->name);
+        printf("scorecard->entries[%d].description: %s \n", j, entry->description);
+        printf("scorecard->entries[%d].value: %d \n", j, entry->value);
+        printf("scorecard->entries[%d].calculation: %d \n", j, entry->calculation(dice));
+    }
     return 0;
 }
 

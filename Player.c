@@ -10,6 +10,7 @@
 PlayerList *init_playerList(int count) {
     PlayerList *list = malloc(sizeof(PlayerList) + count * sizeof(Player));
     list->size = count;
+    return list;
 }
 
 void destruct_playerList(PlayerList *playerList) {
@@ -24,10 +25,6 @@ void destruct_playerList(PlayerList *playerList) {
 void init_playerName(Player *player, char *name) {
     player->name = malloc(strlen(name) + 1);
     strcpy(player->name, name);
-}
-
-void playerList_setPlayerOrder(PlayerList *playerList, int i, int order) {
-    (*playerList).players[i].order = order;
 }
 
 Player *playerList_getPlayer(PlayerList *playerList, int i) {

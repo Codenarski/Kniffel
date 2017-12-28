@@ -9,7 +9,6 @@
 
 typedef struct Player {
     char *name;
-    int order;
 } Player;
 
 typedef struct PlayerList {
@@ -26,4 +25,19 @@ typedef struct Dice {
     Die dice[5];
     int size;
 } Dice;
+
+typedef struct ScorecardEntry {
+    char *name;
+    char *description;
+
+    int (*calculation)(Dice *dice);
+
+    int value;
+} ScorecardEntry;
+
+typedef struct Scorecard {
+    ScorecardEntry *entries;
+    int size;
+} Scorecard;
+
 #endif //KNIFFEL3_ENTITY_Has f
