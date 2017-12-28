@@ -1,10 +1,9 @@
 //
 // Created by BEDNARSKIJ on 21.12.2017.
 //
-
-#include "Entity.h"
 #include <stdlib.h>
 #include <time.h>
+#include "Die.h"
 
 int roll_die() {
     return (rand() % 6) + 1;

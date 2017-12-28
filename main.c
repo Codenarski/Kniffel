@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include "Player.h"
-#include "Die.h"
-#include "Scorecard.h"
 
 PlayerList *letUserSelectPlayer();
-
 void letUserGivePlayerNames(const PlayerList *playerList);
-
 void tellUserPlayerNames(const PlayerList *playerList);
 
 int main() {
@@ -20,15 +16,8 @@ int main() {
     for (int i = 0; i < 5; ++i) {
         printf("Dice[%d]: %d \n", i, dice->dice[i].value);
     }
-    Scorecard *scorecard = initializeScorecard();
-    for (int j = 0; j < scorecard->size; ++j) {
-        ScorecardEntry *entry = &scorecard->entries[j];
-
-        //Todo: Remove Check
-        printf("scorecard->entries[%d].name: %s \n", j, entry->name);
-        printf("scorecard->entries[%d].description: %s \n", j, entry->description);
-        printf("scorecard->entries[%d].value: %d \n", j, entry->value);
-        printf("scorecard->entries[%d].calculation: %d \n", j, entry->calculation(dice));
+    for (int j = 0; j < playerList->size; ++j) {
+        printf("players[j].scorecard->entries->name: %s", playerList->players[j].scorecard->entries[0].name);
     }
     return 0;
 }
@@ -38,9 +27,8 @@ void letUserGivePlayerNames(const PlayerList *playerList) {
     for (int i = 0; i < playerList->size; ++i) {
         printf("Please enter name of player %d\n", i + 1);
         scanf("%s", &name);
-        init_playerName(&playerList->players[i], &name);
+        setPlayerName(&playerList->players[i], &name);
     }
-
 }
 
 PlayerList *letUserSelectPlayer() {
@@ -55,5 +43,4 @@ void tellUserPlayerNames(const PlayerList *playerList) {
     for (int i = 0; i < playerList->size; ++i) {
         printf("Name of Player %d: %s\n", i + 1, playerList->players[i].name);
     }
-
 }

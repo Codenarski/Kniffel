@@ -7,9 +7,16 @@
 #include "Player.h"
 
 
-PlayerList *init_playerList(int count) {
-    PlayerList *list = malloc(sizeof(PlayerList) + count * sizeof(Player));
-    list->size = count;
+void initPlayer(Player *player) {
+    player->scorecard = initializeScorecard();
+}
+
+PlayerList *init_playerList(int amountOfPlayers) {
+    PlayerList *list = malloc(sizeof(PlayerList) + amountOfPlayers * sizeof(Player));
+    list->size = amountOfPlayers;
+    for (int i = 0; i < amountOfPlayers; ++i) {
+        initPlayer(&list->players[i]);
+    }
     return list;
 }
 
@@ -22,11 +29,9 @@ void destruct_playerList(PlayerList *playerList) {
     free(playerList);
 }
 
-void init_playerName(Player *player, char *name) {
+void setPlayerName(Player *player, char *name) {
     player->name = malloc(strlen(name) + 1);
     strcpy(player->name, name);
 }
 
-Player *playerList_getPlayer(PlayerList *playerList, int i) {
-    return &playerList->players[i];
-}
+

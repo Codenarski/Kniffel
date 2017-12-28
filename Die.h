@@ -2,13 +2,22 @@
 // Created by BEDNARSKIJ on 21.12.2017.
 //
 
-#include "Entity.h"
-#include "Player.h"
 #include <stdbool.h>
 
 
 #ifndef KNIFFEL3_DIE_H
 #define KNIFFEL3_DIE_H
+
+
+typedef struct Die {
+    int value;
+    bool isSelected;
+} Die;
+
+typedef struct Dice {
+    Die dice[5];
+    int size;
+} Dice;
 
 Dice *init_dice();
 

@@ -5,13 +5,21 @@
 #ifndef KNIFFEL3_PLAYER_H
 #define KNIFFEL3_PLAYER_H
 
-#include "Entity.h"
+#include "Scorecard.h"
 
-PlayerList *init_playerList(int count);
+typedef struct Player {
+    char *name;
+    Scorecard *scorecard;
+} Player;
 
+typedef struct PlayerList {
+    int size;
+    Player players[0];
+} PlayerList;
+
+PlayerList *init_playerList(int amountOfPlayers);
+
+void setPlayerName(Player *player, char *name);
 void destruct_playerList(PlayerList *playerList);
 
-void init_playerName(Player *player, char *name);
-void playerList_setPlayerOrder(PlayerList *playerList, int i, int order);
-Player *playerList_getPlayer(PlayerList *playerList, int i);
 #endif //KNIFFEL3_PLAYER_H

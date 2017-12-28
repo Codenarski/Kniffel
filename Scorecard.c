@@ -4,7 +4,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "Entity.h"
+#include "Scorecard.h"
 
 void
 initializeScorecardEntry(ScorecardEntry *scorecardEntry, char *name, char *description, int(*calculation)(Dice *dice)) {
@@ -14,6 +14,7 @@ initializeScorecardEntry(ScorecardEntry *scorecardEntry, char *name, char *descr
     strcpy(scorecardEntry->description, description);
     scorecardEntry->value = 0;
     scorecardEntry->calculation = calculation;
+    scorecardEntry->isStrike = false;
 }
 
 int points25(Dice *dice) {
@@ -44,7 +45,6 @@ Scorecard *initializeScorecard() {
     Scorecard *scorecard = malloc(sizeof(Scorecard));
     scorecard->size = 13;
     scorecard->entries = malloc(scorecard->size * sizeof(ScorecardEntry));
-
 
     initializeScorecardEntry(&scorecard->entries[0], "Einser", "Die Summe der Augenzahlen der Einser", pointsSum);
     initializeScorecardEntry(&scorecard->entries[1], "Zweier", "Die Summe der Augenzahlen der Zweier", pointsSum);
