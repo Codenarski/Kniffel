@@ -62,3 +62,11 @@ Scorecard *initializeScorecard() {
     initializeScorecardEntry(&scorecard->entries[12], "Chance", "Jede Kombination", pointsSum);
     return scorecard;
 }
+
+bool scorecardDoesNotExist(int scoreboardEntryIndex) {
+    return scoreboardEntryIndex < 0 || scoreboardEntryIndex > 13;
+}
+
+bool scorecardAlreadyPlayed(ScorecardEntry *scorecardEntry) {
+    return scorecardEntry->hasBeenPlayed;
+}

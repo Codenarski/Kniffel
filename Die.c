@@ -16,6 +16,7 @@ Dice *init_dice() {
         dice->dice[i].value = 0;
         dice->dice[i].isSelected = false;
     }
+    dice->size = 5;
     return dice;
 }
 

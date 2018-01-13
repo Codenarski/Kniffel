@@ -14,6 +14,7 @@ typedef struct ScorecardEntry {
     int (*calculation)(Dice *dice);
 
     int value;
+    bool hasBeenPlayed;
     bool isStrike;
 } ScorecardEntry;
 
@@ -24,4 +25,7 @@ typedef struct Scorecard {
 
 Scorecard *initializeScorecard();
 
+bool scorecardDoesNotExist(int scoreboardEntryIndex);
+
+bool scorecardAlreadyPlayed(ScorecardEntry *scorecardEntry);
 #endif //KNIFFEL3_SCORECARD_H

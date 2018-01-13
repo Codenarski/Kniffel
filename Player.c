@@ -4,6 +4,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "Player.h"
 
 
@@ -32,6 +33,12 @@ void destruct_playerList(PlayerList *playerList) {
 void setPlayerName(Player *player, char *name) {
     player->name = malloc(strlen(name) + 1);
     strcpy(player->name, name);
+}
+
+void printCurrentScoreboard(Player *player) {
+    for (int i = 0; i < player->scorecard->size; ++i) {
+        printf("Entry: %s, Value: %d", player->scorecard->entries[i].name, player->scorecard->entries[i].value);
+    }
 }
 
 
