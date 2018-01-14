@@ -67,7 +67,7 @@ Scorecard *initializeScorecard() {
 }
 
 bool scorecardDoesNotExist(int scoreboardEntryIndex) {
-    return scoreboardEntryIndex < 0 || scoreboardEntryIndex > 13;
+    return scoreboardEntryIndex < 0 || scoreboardEntryIndex > 12;
 }
 
 bool scorecardAlreadyPlayed(ScorecardEntry *scorecardEntry) {

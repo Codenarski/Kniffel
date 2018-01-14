@@ -37,7 +37,7 @@ void setPlayerName(Player *player, char *name) {
 
 void printCurrentScoreboard(Player *player) {
     for (int i = 0; i < player->scorecard->size; ++i) {
-        printf("Entry: %s, Value: %d \n", player->scorecard->entries[i].name, player->scorecard->entries[i].value);
+        printf("%d: %s, Value: %d \n", i + 1, player->scorecard->entries[i].name, player->scorecard->entries[i].value);
     }
 }
 

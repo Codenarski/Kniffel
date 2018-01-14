@@ -21,8 +21,8 @@ Dice *init_dice() {
 }
 
 void roll_dice(Dice *dice) {
-    for (int i = 0; i < sizeof(dice->dice) / sizeof(Die); ++i) {
-        if (!dice->dice->isSelected) {
+    for (int i = 0; i < dice->size; ++i) {
+        if (!dice->dice[i].isSelected) {
             dice->dice[i].value = roll_die();
         }
     }
