@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include "Player.h"
 
 PlayerList *letUserSelectPlayer();
@@ -8,7 +8,7 @@ void tellUserPlayerNames(const PlayerList *playerList);
 
 void startGame(PlayerList *playerList);
 
-void playRound(Player *player);
+bool playRoundAndContinue(Player *player);
 
 bool askUserToFinishRound(Dice *dice);
 
@@ -34,23 +34,32 @@ int main() {
 }
 
 void startGame(PlayerList *playerList) {
-    for (int j = 0; j < playerList->players[0].scorecard->size; ++j) {
-        for (int i = 0; i < playerList->size; ++i) {
-            for (int k = 0; k < 3; ++k) {
-                playRound(&playerList->players[i]);
+    for (int round = 0; round < playerList->players[0].scorecard->size; ++round) {
+        printf("Round: %d\n", round);
+        for (int player = 0; player < playerList->size; ++player) {
+            printf("Player %d is starting\n", player);
+            for (int playerRoll = 0; playerRoll < 3; ++playerRoll) {
+                printf("Player %d is playing is rolling the %d time\n", player, playerRoll);
+                if (!playRoundAndContinue(&playerList->players[player])) {
+                    break;
+                }
             }
         }
     }
 }
 
-void playRound(Player *player) {
+bool playRoundAndContinue(Player *player) {
     Dice *dice = init_dice();
     roll_dice(dice);
     showUserHisResult(dice);
     if (askUserToFinishRound(dice)) {
+        printf("Player wants to finish round\n");
         letUserChooseScoreboardEntry(player, dice);
+        return false;
     } else {
+        printf("Player wants to continue round\n");
         letUserSelectDiceToSelect();
+        return true;
     }
 }
 
@@ -61,11 +70,11 @@ void showUserHisResult(Dice *dice) {
 }
 
 bool askUserToFinishRound(Dice *dice) {
-    printf("Do you want to finish your Round? (Yes/No)\n");
-    char *decision = "";
-    scanf("%s", &decision);
-    //Todo: Crasht bei Eingabe "yes"
-    return decision == "Yes" ? true : false;
+    printf("Do you want to finish your Round? (Y/N)\n");
+    char decision;
+    scanf("%c", &decision);
+    decision = toupper(decision);
+    return decision == 'Y' ? true : false;
 }
 
 void letUserSelectDiceToSelect() {
@@ -83,6 +92,7 @@ void letUserChooseScoreboardEntry(Player *player, Dice *dice) {
 }
 
 ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player) {
+    //TODO: User soll nur werte von 1-13 eingeben dürfen und nicht 0-12
     long chosenScoreboard = -1;
     bool firstRunDone = false;
     do {
@@ -90,10 +100,10 @@ ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player) {
             printf("Sorry, the scoreboard you entered is invalid: %li\n", chosenScoreboard);
         }
         printf("Please enter the number of the row you want to put in your value\n");
-        char *decision = "";
-        scanf("%s", &decision);
-        chosenScoreboard = strtol(decision, NULL, 10);
+        int decision;
+        scanf("%d", &decision);
         firstRunDone = true;
+        chosenScoreboard = decision;
     } while (scorecardDoesNotExist(chosenScoreboard) ||
              scorecardAlreadyPlayed(&player->scorecard->entries[chosenScoreboard]));
     return &player->scorecard->entries[chosenScoreboard];

@@ -15,6 +15,7 @@ initializeScorecardEntry(ScorecardEntry *scorecardEntry, char *name, char *descr
     scorecardEntry->value = 0;
     scorecardEntry->calculation = calculation;
     scorecardEntry->isStrike = false;
+    scorecardEntry->hasBeenPlayed = false;
 }
 
 int points25(Dice *dice) {
@@ -45,20 +46,22 @@ Scorecard *initializeScorecard() {
     Scorecard *scorecard = malloc(sizeof(Scorecard));
     scorecard->size = 13;
     scorecard->entries = malloc(scorecard->size * sizeof(ScorecardEntry));
-
+    //TODO: Richtige Punktekalkulation für alle Fälle + Validierung
     initializeScorecardEntry(&scorecard->entries[0], "Einser", "Die Summe der Augenzahlen der Einser", pointsSum);
     initializeScorecardEntry(&scorecard->entries[1], "Zweier", "Die Summe der Augenzahlen der Zweier", pointsSum);
     initializeScorecardEntry(&scorecard->entries[2], "Dreier", "Die Summe der Augenzahlen der Dreier", pointsSum);
     initializeScorecardEntry(&scorecard->entries[3], "Vierer", "Die Summe der Augenzahlen der Vierer", pointsSum);
-    initializeScorecardEntry(&scorecard->entries[4], "Fünfer", "Die Summe der Augenzahlen der Fünfer", pointsSum);
+    initializeScorecardEntry(&scorecard->entries[4], "Fuenfer", "Die Summe der Augenzahlen der Fuenfer", pointsSum);
     initializeScorecardEntry(&scorecard->entries[5], "Sechser", "Die Summe der Augenzahlen der Sechser", pointsSum);
-    initializeScorecardEntry(&scorecard->entries[6], "Dreierpasch", "Mindestens drei gleiche Würfel", pointsSum);
-    initializeScorecardEntry(&scorecard->entries[7], "Viererpasch", "Mindestens vier gleiche Würfel", pointsSum);
+    initializeScorecardEntry(&scorecard->entries[6], "Dreierpasch", "Mindestens drei gleiche Wuerfel", pointsSum);
+    initializeScorecardEntry(&scorecard->entries[7], "Viererpasch", "Mindestens vier gleiche Wuerfel", pointsSum);
     initializeScorecardEntry(&scorecard->entries[8], "Full House",
-                             "Drei gleiche und zwei gleiche Würfel oder fünf gleiche", points25);
-    initializeScorecardEntry(&scorecard->entries[9], "Kleine Straße", "Vier aufeinanderfolgende Augenzahlen", points30);
-    initializeScorecardEntry(&scorecard->entries[10], "Große Straße", "Fünf aufeinanderfolgende Augenzahlen", points40);
-    initializeScorecardEntry(&scorecard->entries[11], "Kniffel / Yahtzee", "Fünf gleiche Würfel", points50);
+                             "Drei gleiche und zwei gleiche Wuerfel oder fuenf gleiche", points25);
+    initializeScorecardEntry(&scorecard->entries[9], "Kleine Strasse", "Vier aufeinanderfolgende Augenzahlen",
+                             points30);
+    initializeScorecardEntry(&scorecard->entries[10], "Grosse Strasse", "Fuenf aufeinanderfolgende Augenzahlen",
+                             points40);
+    initializeScorecardEntry(&scorecard->entries[11], "Kniffel / Yahtzee", "Fuenf gleiche Wuerfel", points50);
     initializeScorecardEntry(&scorecard->entries[12], "Chance", "Jede Kombination", pointsSum);
     return scorecard;
 }
