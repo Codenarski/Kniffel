@@ -1,27 +1,19 @@
+
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 #include "Player.h"
 
 PlayerList *letUserSelectPlayer();
 void letUserGivePlayerNames(const PlayerList *playerList);
 void tellUserPlayerNames(const PlayerList *playerList);
-
 void startGame(PlayerList *playerList);
-
 bool playRoundAndContinue(Player *player, Dice *dice, bool lastRound);
-
 bool askUserToFinishRound(Dice *dice);
-
 void letUserChooseScoreboardEntry(Player *player, Dice *dice);
-
 void nextPlayer();
-
 void letUserSelectDiceToSelect(Dice *dice);
-
 void showUserHisResult(Dice *dice);
-
 ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player);
-
 bool doesUserEnteredYes();
 
 int main() {
@@ -81,10 +73,10 @@ bool askUserToFinishRound(Dice *dice) {
 }
 
 bool doesUserEnteredYes() {
-    char decision = 'A';
-    scanf(" %c", &decision);
-    decision = toupper(decision);
-    return decision == 'Y' ? true : false;
+    char *decision;
+    scanf("%s", &decision);
+    strupr(&decision);
+    return strcmp(&decision, "YES") == 0 ? true : false;
 }
 
 bool doesUserEnteredNo() {
