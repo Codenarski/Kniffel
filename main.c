@@ -73,11 +73,6 @@ bool askUserToFinishRound(Dice *dice) {
 }
 
 bool doesUserEnteredYes() {
-    /*char *decision;
-    scanf("%s", &decision);
-    strupr(&decision);
-    return strcmp(&decision, "YES") == 0 ? true : false;*/
-
     char *decision;
     char *YES = "YES";
     scanf("%s", decision);
@@ -134,10 +129,6 @@ void letUserGivePlayerNames(const PlayerList *playerList) {
     for (int i = 0; i < playerList->size; ++i) {
         char *name;
         printf("Please enter name of player %d\n", i + 1);
-        /*scanf("%s", &name);
-        setPlayerName(&playerList->players[i], &name);
-        printf("Playername: %s\n",&name);*/
-
         scanf("%s", name);
         setPlayerName(&playerList->players[i], name);
         printf("Playername: %s\n", name);
