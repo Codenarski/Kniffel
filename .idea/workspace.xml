@@ -35,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="800">
-              <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="142" selection-end-column="18" />
+              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="143" selection-end-column="18" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
               </folding>
@@ -253,7 +253,7 @@
       <workItem from="1517133865571" duration="1395000" />
       <workItem from="1517161849196" duration="597000" />
       <workItem from="1517606993768" duration="6433000" />
-      <workItem from="1517613620263" duration="1475000" />
+      <workItem from="1517613620263" duration="1505000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1513857347916</created>
@@ -353,11 +353,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516452405139</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="validation for playeramount now works">
+      <created>1517615119457</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1517615119457</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61498000" />
+    <option name="totallyTimeSpent" value="61528000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,7 +454,8 @@
     <MESSAGE value="Fixed some userinteractions, c still sucks" />
     <MESSAGE value="Fixed playerdecision" />
     <MESSAGE value="Fixed trying some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed trying some stuff" />
+    <MESSAGE value="validation for playeramount now works" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation for playeramount now works" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -813,7 +821,7 @@
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="142" selection-end-column="18" />
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="143" selection-end-column="18" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
           </folding>
