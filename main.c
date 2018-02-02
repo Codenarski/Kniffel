@@ -1,10 +1,12 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "Player.h"
 
 PlayerList *letUserSelectPlayer();
-void letUserGivePlayerNames(const PlayerList *playerList);
+
+void letUserGivePlayerNames(PlayerList *playerList);
 void tellUserPlayerNames(const PlayerList *playerList);
 void startGame(PlayerList *playerList);
 bool playRoundAndContinue(Player *player, Dice *dice, bool lastRound);
@@ -68,11 +70,12 @@ void showUserHisResult(Dice *dice) {
 }
 
 bool askUserToFinishRound(Dice *dice) {
-    printf("Do you want to finish your Round? (Y/N)\n");
+    printf("Do you want to finish your Round? (YES/NO)\n");
     return doesUserEnteredYes();
 }
 
 bool doesUserEnteredYes() {
+    //TODO: decision needs init
     char *decision;
     char *YES = "YES";
     scanf("%s", decision);
@@ -88,7 +91,7 @@ bool doesUserEnteredNo() {
 void letUserSelectDiceToSelect(Dice *dice) {
     printf("Please enter the Dice you want to select (Selected Dice won't be rerolled)\n");
     for (int i = 0; i < dice->size; ++i) {
-        printf("Do you want to select Dice %d (Y/N) \n", i + 1);
+        printf("Do you want to select Dice %d (YES/NO) \n", i + 1);
         if (doesUserEnteredYes()) {
             dice->dice[i].isSelected = true;
         }
@@ -106,12 +109,12 @@ void letUserChooseScoreboardEntry(Player *player, Dice *dice) {
 }
 
 ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player) {
-    //TODO: User soll nur werte von 1-13 eingeben dürfen und nicht 0-12
+    //TODO: validation
     long chosenScoreboard = -1;
     bool firstRunDone = false;
     do {
         if (firstRunDone) {
-            printf("Sorry, the scoreboard you entered is invalid: %li\n", chosenScoreboard);
+            printf("Sorry, the scoreboard you entered is invalid: %li\n", chosenScoreboard + 1);
         }
         printf("Please enter the number of the row you want to put in your value\n");
         int decision;
@@ -124,8 +127,7 @@ ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player) {
 }
 
 
-void letUserGivePlayerNames(const PlayerList *playerList) {
-    // TODO: Bug, crasht wenn sich die namenslaenger aendert
+void letUserGivePlayerNames(PlayerList *playerList) {
     for (int i = 0; i < playerList->size; ++i) {
         char *name;
         printf("Please enter name of player %d\n", i + 1);
@@ -136,11 +138,21 @@ void letUserGivePlayerNames(const PlayerList *playerList) {
 }
 
 PlayerList *letUserSelectPlayer() {
-    int amount;
-    printf("Please enter the amount of players: ");
-    //todo: Validation
-    scanf("%d", &amount);
-    return init_playerList(amount);
+
+    char userInput[100], *end;
+    long amountOfPlayers = 0;
+    while (true) {
+        printf("Please enter the amount of players: ");
+        scanf("%100s", userInput);
+        amountOfPlayers = strtol(userInput, &end, 10);
+        if (end == userInput) {
+            printf("wasn't a number\n");
+        } else if (end[0] != '\0') {
+            printf("trailing characters after number %ld: %s\n", amountOfPlayers, end);
+        } else {
+            return init_playerList(amountOfPlayers);
+        }
+    }
 }
 
 void tellUserPlayerNames(const PlayerList *playerList) {
