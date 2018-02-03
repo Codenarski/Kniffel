@@ -18,10 +18,8 @@ typedef struct PlayerList {
 } PlayerList;
 
 PlayerList *init_playerList(int amountOfPlayers);
-
 void setPlayerName(Player *player, char *name);
 void destruct_playerList(PlayerList *playerList);
-
 void printCurrentScoreboard(Player *player);
 
 #endif //KNIFFEL3_PLAYER_H

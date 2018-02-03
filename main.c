@@ -75,13 +75,18 @@ bool askUserToFinishRound(Dice *dice) {
 }
 
 bool doesUserEnteredYes() {
-    //TODO: decision needs init
-    char *decision;
+    char *decision = malloc(100);
     char *YES = "YES";
     scanf("%s", decision);
     decision = strupr(decision);
     printf("%s\n", decision);
-    return strcmp(decision, YES) == 0 ? true : false;
+    if (strcmp(decision, YES) == 0) {
+        free(decision);
+        return true;
+    } else {
+        free(decision);
+        return false;
+    }
 }
 
 bool doesUserEnteredNo() {
@@ -109,36 +114,41 @@ void letUserChooseScoreboardEntry(Player *player, Dice *dice) {
 }
 
 ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player) {
-    //TODO: validation
-    long chosenScoreboard = -1;
+    char userInput[100], *end;
+    long chosenScoreboard = -1, decision;
     bool firstRunDone = false;
     do {
         if (firstRunDone) {
             printf("Sorry, the scoreboard you entered is invalid: %li\n", chosenScoreboard + 1);
         }
         printf("Please enter the number of the row you want to put in your value\n");
-        int decision;
-        scanf("%d", &decision);
+        scanf("%100s", userInput);
+        decision = strtol(userInput, &end, 10);
         firstRunDone = true;
-        chosenScoreboard = decision - 1;
+        if (end == userInput) {
+            printf("Invalid input, please enter a number\n");
+        } else if (end[0] != '\0') {
+            printf("trailing characters after number %ld: %s\n", decision, end);
+        } else {
+            chosenScoreboard = decision - 1;
+        }
     } while (scorecardDoesNotExist(chosenScoreboard) ||
              scorecardAlreadyPlayed(&player->scorecard->entries[chosenScoreboard]));
     return &player->scorecard->entries[chosenScoreboard];
 }
 
-
 void letUserGivePlayerNames(PlayerList *playerList) {
     for (int i = 0; i < playerList->size; ++i) {
-        char *name;
-        printf("Please enter name of player %d\n", i + 1);
+        char *name = malloc(100);
+        printf("Please enter name of player: %d\n", i + 1);
         scanf("%s", name);
         setPlayerName(&playerList->players[i], name);
         printf("Playername: %s\n", name);
+        free(name);
     }
 }
 
 PlayerList *letUserSelectPlayer() {
-
     char userInput[100], *end;
     long amountOfPlayers = 0;
     while (true) {
@@ -146,7 +156,7 @@ PlayerList *letUserSelectPlayer() {
         scanf("%100s", userInput);
         amountOfPlayers = strtol(userInput, &end, 10);
         if (end == userInput) {
-            printf("wasn't a number\n");
+            printf("Invalid input, please enter a number\n");
         } else if (end[0] != '\0') {
             printf("trailing characters after number %ld: %s\n", amountOfPlayers, end);
         } else {
