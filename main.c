@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -12,7 +11,6 @@ void startGame(PlayerList *playerList);
 bool playRoundAndContinue(Player *player, Dice *dice, bool lastRound);
 bool askUserToFinishRound(Dice *dice);
 void letUserChooseScoreboardEntry(Player *player, Dice *dice);
-void nextPlayer();
 void letUserSelectDiceToSelect(Dice *dice);
 void showUserHisResult(Dice *dice);
 ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player);
@@ -89,10 +87,6 @@ bool doesUserEnteredYes() {
     }
 }
 
-bool doesUserEnteredNo() {
-    return !doesUserEnteredYes();
-}
-
 void letUserSelectDiceToSelect(Dice *dice) {
     printf("Please enter the Dice you want to select (Selected Dice won't be rerolled)\n");
     for (int i = 0; i < dice->size; ++i) {
@@ -101,10 +95,6 @@ void letUserSelectDiceToSelect(Dice *dice) {
             dice->dice[i].isSelected = true;
         }
     }
-}
-
-void nextPlayer() {
-
 }
 
 void letUserChooseScoreboardEntry(Player *player, Dice *dice) {
@@ -129,9 +119,8 @@ ScorecardEntry *askUserWhichEntryHeWantsToFill(Player *player) {
             printf("Invalid input, please enter a number\n");
         } else if (end[0] != '\0') {
             printf("trailing characters after number %ld: %s\n", decision, end);
-        } else {
-            chosenScoreboard = decision - 1;
         }
+        chosenScoreboard = decision - 1;
     } while (scorecardDoesNotExist(chosenScoreboard) ||
              scorecardAlreadyPlayed(&player->scorecard->entries[chosenScoreboard]));
     return &player->scorecard->entries[chosenScoreboard];
@@ -147,7 +136,6 @@ void letUserGivePlayerNames(PlayerList *playerList) {
         free(name);
     }
 }
-
 PlayerList *letUserSelectPlayer() {
     char userInput[100], *end;
     long amountOfPlayers = 0;

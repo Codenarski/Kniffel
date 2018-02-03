@@ -7,6 +7,7 @@
 #ifndef KNIFFEL3_SCORECARD_H
 #define KNIFFEL3_SCORECARD_H
 
+//TODO: Use isStrike
 typedef struct ScorecardEntry {
     char *name;
     char *description;
