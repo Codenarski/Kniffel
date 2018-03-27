@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.9)
-project(Kniffel3 C)
+project(Kniffel3)
 
-set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Kniffel3 main.c Player.h Player.c Die.c Die.h Scorecard.c Scorecard.h)
+add_executable(Kniffel3
+        Die.c
+        Die.h
+        main.c
+        Player.c
+        Player.h
+        Scorecard.c
+        Scorecard.h)
